@@ -1,0 +1,36 @@
+body {
+  padding-top: 54px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+a {
+	color: #0066d4;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+.card-title {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.nav-link {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+footer {
+	font-size: 0.8em;
+}

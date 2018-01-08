@@ -1,0 +1,20 @@
+{
+	"theme_name": "Aquafortis",
+	"theme_version": "1.0",
+	"theme_release_date": "2018-01-10",
+	"theme_license": "Commercial",
+	"theme_price_usd": "5",
+	"theme_download_url": "https://download",
+	"theme_demo_url": "https://demo",
+	"theme_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.",
+	"theme_features": {
+		"0": "Responsive",
+		"1": "Flat",
+		"2": "Clean"
+	},
+	"author_name": "Diego",
+	"author_email": "",
+	"author_contact_url": "",
+	"author_website": "",
+	"author_twitter": ""
+}
