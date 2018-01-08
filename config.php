@@ -3,6 +3,7 @@ define('BLUDIT', true);
 define('DS', DIRECTORY_SEPARATOR);
 define('PATH_ROOT', __DIR__.DS);
 define('PATH_PHP', PATH_ROOT.'php'.DS);
+define('PATH_METADATA', PATH_ROOT.'metadata'.DS);
 define('CHARSET', 'UTF-8');
 define('DOMAIN', 'https://themes.bludit.com');
 define('CDN', 'https://df6m0u2ovo2fu.cloudfront.net');
@@ -44,3 +45,27 @@ function listDirectories($path, $regex='*', $sortByDate=false) {
         }
         return $directories;
 }
+
+function getItems() {
+	$tmp = array();
+	$files = glob(PATH_METADATA.'*.json');
+	foreach ($files as $file) {
+		$json = file_get_contents($file);
+		$data = json_decode($json, true);
+		array_push($tmp, $data);
+	}
+
+	usort($tmp, "sortByDate");
+	return $tmp;
+}
+
+function sortByDate($a, $b) {
+    if ($a['theme_release_date'] == $b['theme_release_date']) {
+        return 0;
+    }
+    return ($a['theme_release_date'] > $b['theme_release_date']) ? -1 : 1;
+}
+
+$items = getItems();
+
+print_r($items);

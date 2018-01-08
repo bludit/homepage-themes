@@ -1,0 +1,15 @@
+{
+	"demo": "Demo",
+	"documentation": "Dokumentacja",
+	"themes": "Motywy",
+	"plugins": "Wtyczki",
+	"donations": "Darowizny",
+	"donate": "Darmowizna",
+	"download": "Pobieranie",
+	"bludit-license": "Bludit wydawany jest na <a href=\"https://tldrlegal.com/license/mit-license\">licencji MIT</a>",
+
+	"head-title": "Motywy | Bludit",
+	"head-description": "Piękne i fajne motywy dla Bludit. Pełne wsparcie dla HTML5, responsywność, elastyczność, prostota i czystość.",
+	"little-description-paragraph1": "<b>Piękne</b> i <b>fajne</b> motywy dla Bludit",
+	"search": "Szukaj"
+}

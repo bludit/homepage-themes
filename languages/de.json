@@ -1,0 +1,15 @@
+{
+	"demo": "Demo",
+	"documentation": "Dokumentation",
+	"themes": "Themes",
+	"plugins": "Plugins",
+	"donations": "Spenden",
+	"donate": "Spenden",
+	"download": "Download",
+	"bludit-license": "Bludit steht unter der <a href=\"https://tldrlegal.com/license/mit-license\">MIT-Lizenz</a>",
+
+	"head-title": "Themes | Bludit",
+	"head-description": "Schöne und coole Themes für Bludit. Unterstützung von HTML5, responsiv, flexibel, einfach and übersichtlich.",
+	"little-description-paragraph1": "<b>Schönbe</b> und <b>coole</b> Themes für Bludit",
+	"search": "Suche"
+}
