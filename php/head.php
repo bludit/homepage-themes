@@ -17,11 +17,11 @@
 	<meta name="twitter:image" content="<?php echo CDN.'/images/bludit-twitter-cards.png' ?>" />
 
 	<!-- Open Graph -->
-	<meta property="og:locale" content="<?php echo $defaultLocale ?>" />
+	<meta property="og:locale" content="<?php echo $currentLanguage ?>" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="<?php l('head title') ?>" />
 	<meta property="og:description" content="<?php l('head description') ?>" />
-	<meta property="og:url" content="<?php echo $topbar['website'] ?>" />
+	<meta property="og:url" content="<?php echo $_topbar['website'] ?>" />
 	<meta property="og:image" content="<?php echo CDN.'/images/bludit-facebook-cards.png' ?>" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="Bludit Logo" />

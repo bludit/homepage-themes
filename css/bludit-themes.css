@@ -1,29 +1,33 @@
 body {
-  padding-top: 54px;
-  font-family: 'Open Sans', sans-serif;
+	padding-top: 54px;
+	font-family: 'Open Sans', sans-serif;
+	background: #f1f1f1;
 }
 
 @media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+	body {
+		padding-top: 56px;
+	}
 }
 
 a {
-	color: #0066d4;
+	color: #333;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
-}
-
-.pagination {
-  margin-bottom: 30px;
+.item {
+	margin-bottom: 80px;
+	padding-right: 45px;
+	padding-left: 45px;
 }
 
 .card-title {
 	font-weight: normal;
 	text-transform: uppercase;
+}
+
+.card-subtitle {
+	font-size: 0.9em;
+	color: #888;
 }
 
 .nav-link {

@@ -1,39 +1,37 @@
 <!-- Page Content -->
 <div class="container">
 
-  <!-- Page Heading -->
-  <h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
-  </h1>
+	<!-- Page Heading -->
+	<h4 class="my-5 text-center"><?php l('little-description-paragraph1') ?></h4>
 
-  <div class="row">
+	<div class="row my-5">
 
-    <?php foreach ($_items as $item): ?>
+		<?php foreach ($_items as $item): ?>
 
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="<?php echo $_item['theme_name'] ?>" alt="Screenshoot"></a>
-          <div class="card-body">
-            <h4 class="card-title"><a href="#"><?php echo $_item['theme_name'] ?></a></h4>
-            <h6 class="card-subtitle mb-2 text-muted">Made by <?php echo $_item['author_name'] ?></h6>
-            <p class="card-text"><?php echo $_item['theme_description'] ?></p>
-            <?php
-    					if (!empty($_item['theme_demo_url'])) {
-    						echo '<a class="btn btn-primary btn-sm" href="'.$_item['theme_demo_url'].'" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>';
-    					}
+			<div class="col-lg-6 item">
+			<div class="card h-100">
+				<a href="<?php echo DOMAIN.'/theme/'.$item['filename'] ?>"><img class="card-img-top" src="img/<?php echo $item['filename'] ?>.png" alt="Screenshoot"></a>
+				<div class="card-body">
+					<h4 class="card-title"><a href="<?php echo DOMAIN.'?item='.$item['filename'] ?>"><?php echo $item['name'] ?></a></h4>
+					<h6 class="card-subtitle mb-3">Made by <?php echo $item['author_name'] ?></h6>
+					<p class="card-text"><?php echo $item['description'] ?></p>
+					<?php
+						if (!empty($item['demo_url'])) {
+							echo '<a class="btn btn-primary btn-sm" href="'.$item['demo_url'].'" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>'.PHP_EOL;
+						}
 
-    					if (!empty($_item['theme_price_usd'])) {
-    						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['theme_download_url'].'" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Free Download</a>';
-    					} else {
-    						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['theme_download_url'].'" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$_item['theme_price_usd'].'</a>';
-    					}
-    				?>
-          </div>
-        </div>
-      </div>
+						if (!empty($item['price_usd'])) {
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>'.PHP_EOL;
+						} else {
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$item['price_usd'].'</a>'.PHP_EOL;
+						}
+					?>
+				</div>
+			</div>
+			</div>
 
-    <?php endforeach ?>
+		<?php endforeach ?>
 
-  </div>
+	</div>
 
 </div>

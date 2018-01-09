@@ -5,7 +5,7 @@ define('PATH_ROOT', __DIR__.DS);
 define('PATH_PHP', PATH_ROOT.'php'.DS);
 define('PATH_METADATA', PATH_ROOT.'metadata'.DS);
 define('CHARSET', 'UTF-8');
-define('DOMAIN', 'https://themes.bludit.com');
+define('DOMAIN', 'http://localhost:8000');
 define('CDN', 'https://df6m0u2ovo2fu.cloudfront.net');
 
 // Returns the translation of the key
@@ -22,6 +22,18 @@ function l($key, $print=true) {
 	}
 }
 
+function buildItem($data, $filename) {
+	global $currentLanguage;
+	$data['filename'] = $filename;
+	if (isset($data['description_'.$currentLanguage])) {
+		$data['description'] = $data['description_'.$currentLanguage];
+	}
+	if (isset($data['features_'.$currentLanguage])) {
+		$data['features'] = $data['features_'.$currentLanguage];
+	}
+	return $data;
+}
+
 // Returns the items order by date, new to old.
 function getItems() {
 	$tmp = array();
@@ -29,7 +41,8 @@ function getItems() {
 	foreach ($files as $file) {
 		$json = file_get_contents($file);
 		$data = json_decode($json, true);
-		array_push($tmp, $data);
+		$item = buildItem($data, pathinfo($file, PATHINFO_FILENAME));
+		array_push($tmp, $item);
 	}
 
 	usort($tmp, "sortByDate");
@@ -37,21 +50,22 @@ function getItems() {
 }
 
 function getItem($filename) {
-	if (!file_exists(PATH_METADA.$filename.'.json')) {
+	if (!file_exists(PATH_METADATA.$filename.'.json')) {
 		return false;
 	}
 
-	$json = file_get_contents(PATH_METADA.$filename.'.json');
+	$json = file_get_contents(PATH_METADATA.$filename.'.json');
 	$data = json_decode($json, true);
+	$item = buildItem($data, $filename);
 
-	return $data;
+	return $item;
 }
 
 function sortByDate($a, $b) {
-    if ($a['theme_release_date'] == $b['theme_release_date']) {
+    if ($a['release_date'] == $b['release_date']) {
         return 0;
     }
-    return ($a['theme_release_date'] > $b['theme_release_date']) ? -1 : 1;
+    return ($a['release_date'] > $b['release_date']) ? -1 : 1;
 }
 
 function sanitize($string) {
@@ -60,25 +74,25 @@ function sanitize($string) {
 }
 
 // Language passed via $_GET['l']
-$defaultLanguage = 'en';
+$currentLanguage = 'en';
 $acceptedLanguages = array('en', 'de', 'es');
 if (isset($_GET['l'])) {
 	if (in_array($_GET['l'], $acceptedLanguages)) {
-		$defaultLanguage = $_GET['l'];
+		$currentLanguage = $_GET['l'];
 	}
 }
 
-$json = file_get_contents(PATH_ROOT.'languages'.DS.$defaultLanguage.'.json');
+$json = file_get_contents(PATH_ROOT.'languages'.DS.$currentLanguage.'.json');
 $languageArray = json_decode($json, true);
 
 // Top bar links
-if ($defaultLanguage !== "en") {
+if ($currentLanguage !== "en") {
 	$_topbar = array(
-		'documentation'=>'https://docs.bludit.com/'.$defaultLanguage.'/',
-		'themes'=>'https://themes.bludit.com/'.$defaultLanguage.'/',
-		'plugins'=>'https://plugins.bludit.com/'.$defaultLanguage.'/',
-		'pro'=>'https://pro.bludit.com/'.$defaultLanguage.'/',
-		'website'=>DOMAIN.'/'.$defaultLanguage.'/'
+		'documentation'=>'https://docs.bludit.com/'.$currentLanguage.'/',
+		'themes'=>'https://themes.bludit.com/'.$currentLanguage.'/',
+		'plugins'=>'https://plugins.bludit.com/'.$currentLanguage.'/',
+		'pro'=>'https://pro.bludit.com/'.$currentLanguage.'/',
+		'website'=>DOMAIN.'/'.$currentLanguage.'/'
 	);
 } else {
 	$_topbar = array(
