@@ -1,31 +1,41 @@
 <div class="container">
 
-	<h1 class="my-4">Project One</h1>
+	<h1 class="my-4"><?php echo $_item['theme_name'] ?></h1>
 
 	<div class="row">
 		<div class="col-md-8">
-			<img class="img-fluid" src="img/sym1-780x488-q80.png" alt="">
+			<img class="img-fluid" src="<?php echo $_item['theme_name'] ?>" alt="Screenshoot">
 		</div>
 
 		<div class="col-md-4">
 			<div class="my-4">
 				<h3 class="my-3">Description</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+				<p><?php echo $_item['theme_description'] ?></p>
 			</div>
 
 			<div class="my-4">
 				<h3 class="my-3">Features</h3>
 				<ul>
-					<li>Lorem Ipsum</li>
-					<li>Dolor Sit Amet</li>
-					<li>Consectetur</li>
-					<li>Adipiscing Elit</li>
+					<?php
+						foreach ($_item['theme_featues'] as $feature) {
+							echo '<li>'.$feature.'</li>';
+						}
+					?>
 				</ul>
 			</div>
 
 			<div class="my-4">
-				<a class="btn btn-primary btn-block" href="#" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>
-				<a class="btn btn-secondary btn-block" href="#" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $5</a>
+				<?php
+					if (!empty($_item['theme_demo_url'])) {
+						echo '<a class="btn btn-primary btn-block" href="'.$_item['theme_demo_url'].'" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>';
+					}
+
+					if (!empty($_item['theme_price_usd'])) {
+						echo '<a class="btn btn-secondary btn-block" href="'.$_item['theme_download_url'].'" role="button"><i class="fa fa-external-link" aria-hidden="true"></i> Free Download</a>';
+					} else {
+						echo '<a class="btn btn-secondary btn-block" href="'.$_item['theme_download_url'].'" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$_item['theme_price_usd'].'</a>';
+					}
+				?>
 			</div>
 		</div>
 	</div>

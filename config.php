@@ -46,6 +46,7 @@ function listDirectories($path, $regex='*', $sortByDate=false) {
         return $directories;
 }
 
+// Returns the items order by date, new to old.
 function getItems() {
 	$tmp = array();
 	$files = glob(PATH_METADATA.'*.json');
@@ -59,6 +60,17 @@ function getItems() {
 	return $tmp;
 }
 
+function getItem($filename) {
+	if (!file_exists(PATH_METADA.$filename.'.json')) {
+		return false;
+	}
+
+	$json = file_get_contents(PATH_METADA.$filename.'.json');
+	$data = json_decode($json, true);
+
+	return $data;
+}
+
 function sortByDate($a, $b) {
     if ($a['theme_release_date'] == $b['theme_release_date']) {
         return 0;
@@ -66,6 +78,26 @@ function sortByDate($a, $b) {
     return ($a['theme_release_date'] > $b['theme_release_date']) ? -1 : 1;
 }
 
-$items = getItems();
+function sanitize($string) {
+	// Replaces all spaces for dashs
+	$string = str_replace(' ', '-', $string);
 
-print_r($items);
+	 // Removes special chars
+	 return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
+}
+
+$_items = false;
+$_item = false;
+$_whereAmI = 'home';
+
+if (!empty($_GET['item'])) {
+	$itemName = sanitize($_GET['item']);
+	$_item = getItem($itemName);
+	$_whereAmI = 'item';
+	if ($_item===false) {
+		$_whereAmI = 'notfound';
+	}
+} else {
+	$_items = getItems();
+	$_whereAmI = 'home';
+}

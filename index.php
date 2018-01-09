@@ -7,7 +7,15 @@
 	<?php include(PATH_PHP.'topnavbar.php'); ?>
 
 	<!-- Main -->
-	<?php include(PATH_PHP.'item.php'); ?>
+	<?php
+		if ($_whereAmI==='notfound') {
+			include(PATH_PHP.'notfound.php');
+		} elseif ($_whereAmI==='item') {
+			include(PATH_PHP.'item.php');
+		} else {
+			include(PATH_PHP.'home.php');
+		}
+	?>
 
 	<!-- Footer -->
 	<?php include(PATH_PHP.'footer.php'); ?>
