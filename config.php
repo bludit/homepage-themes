@@ -7,20 +7,8 @@ define('PATH_METADATA', PATH_ROOT.'metadata'.DS);
 define('CHARSET', 'UTF-8');
 define('DOMAIN', 'https://themes.bludit.com');
 define('CDN', 'https://df6m0u2ovo2fu.cloudfront.net');
-define('FILES', PATH_ROOT.'files'.DS);
 
-// Language passed via $_GET['l']
-$defaultLanguage = 'en';
-$acceptedLanguages = array('en', 'de', 'es');
-if (isset($_GET['l'])) {
-	if (in_array($_GET['l'], $acceptedLanguages)) {
-		$defaultLanguage = $_GET['l'];
-	}
-}
-
-$jsonData = file_get_contents(PATH_ROOT.'languages'.DS.$defaultLanguage.'.json');
-$languageArray = json_decode($jsonData, true);
-
+// Returns the translation of the key
 function l($key, $print=true) {
 	global $languageArray;
 	$key = mb_strtolower($key, CHARSET);
@@ -32,18 +20,6 @@ function l($key, $print=true) {
 			return $languageArray[$key];
 		}
 	}
-}
-
-//
-function listDirectories($path, $regex='*', $sortByDate=false) {
-        $directories = glob($path.$regex, GLOB_ONLYDIR);
-        if(empty($directories)) {
-                return array();
-        }
-        if($sortByDate) {
-                usort($directories, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
-        }
-        return $directories;
 }
 
 // Returns the items order by date, new to old.
@@ -79,13 +55,42 @@ function sortByDate($a, $b) {
 }
 
 function sanitize($string) {
-	// Replaces all spaces for dashs
 	$string = str_replace(' ', '-', $string);
-
-	 // Removes special chars
-	 return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
+	return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
 }
 
+// Language passed via $_GET['l']
+$defaultLanguage = 'en';
+$acceptedLanguages = array('en', 'de', 'es');
+if (isset($_GET['l'])) {
+	if (in_array($_GET['l'], $acceptedLanguages)) {
+		$defaultLanguage = $_GET['l'];
+	}
+}
+
+$json = file_get_contents(PATH_ROOT.'languages'.DS.$defaultLanguage.'.json');
+$languageArray = json_decode($json, true);
+
+// Top bar links
+if ($defaultLanguage !== "en") {
+	$_topbar = array(
+		'documentation'=>'https://docs.bludit.com/'.$defaultLanguage.'/',
+		'themes'=>'https://themes.bludit.com/'.$defaultLanguage.'/',
+		'plugins'=>'https://plugins.bludit.com/'.$defaultLanguage.'/',
+		'pro'=>'https://pro.bludit.com/'.$defaultLanguage.'/',
+		'website'=>DOMAIN.'/'.$defaultLanguage.'/'
+	);
+} else {
+	$_topbar = array(
+		'documentation'=>'https://docs.bludit.com',
+		'themes'=>'https://themes.bludit.com',
+		'plugins'=>'https://plugins.bludit.com',
+		'pro'=>'https://pro.bludit.com',
+		'website'=>DOMAIN
+	);
+}
+
+// Items and Item passed via $_GET['item']
 $_items = false;
 $_item = false;
 $_whereAmI = 'home';
