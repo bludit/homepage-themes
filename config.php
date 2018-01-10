@@ -24,9 +24,11 @@ function l($key, $print=true) {
 
 function buildItem($data, $filename) {
 	global $currentLanguage;
+	global $_topbar;
+
 	$data['filename'] = $filename;
 	$data['screenshoot_url'] = CDN.$data['filename'].'/screenshot800x600.png';
-	$data['permalink'] = DOMAIN.'/theme/'.$filename;
+	$data['permalink'] = $_topbar['website'].'/theme/'.$filename;
 	if (isset($data['description_'.$currentLanguage])) {
 		$data['description'] = $data['description_'.$currentLanguage];
 	}
