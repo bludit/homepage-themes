@@ -1,6 +1,6 @@
 <?php include('config.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <?php include(PATH_PHP.'head.php'); ?>
 <body>
 	<!-- Top Bar -->
