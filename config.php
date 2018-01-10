@@ -6,7 +6,7 @@ define('PATH_PHP', PATH_ROOT.'php'.DS);
 define('PATH_METADATA', PATH_ROOT.'metadata'.DS);
 define('CHARSET', 'UTF-8');
 define('DOMAIN', 'http://localhost:8000');
-define('CDN', 'https://df6m0u2ovo2fu.cloudfront.net');
+define('CDN', 'https://rawgit.com/bludit/themes-repository/master/');
 
 // Returns the translation of the key
 function l($key, $print=true) {
@@ -25,6 +25,8 @@ function l($key, $print=true) {
 function buildItem($data, $filename) {
 	global $currentLanguage;
 	$data['filename'] = $filename;
+	$data['screenshoot_url'] = CDN.$data['filename'].'/screenshot800x600.png';
+	$data['permalink'] = DOMAIN.'/theme/'.$filename;
 	if (isset($data['description_'.$currentLanguage])) {
 		$data['description'] = $data['description_'.$currentLanguage];
 	}
@@ -37,24 +39,28 @@ function buildItem($data, $filename) {
 // Returns the items order by date, new to old.
 function getItems() {
 	$tmp = array();
-	$files = glob(PATH_METADATA.'*.json');
-	foreach ($files as $file) {
-		$json = file_get_contents($file);
-		$data = json_decode($json, true);
-		$item = buildItem($data, pathinfo($file, PATHINFO_FILENAME));
-		array_push($tmp, $item);
+	$it = new RecursiveDirectoryIterator(PATH_METADATA);
+	foreach (new RecursiveIteratorIterator($it) as $file) {
+		if ($file->getExtension()=='json') {
+			$json = file_get_contents($file);
+			$data = json_decode($json, true);
+			$item = buildItem($data, pathinfo($file, PATHINFO_FILENAME));
+			array_push($tmp, $item);
+		}
 	}
-
+	// Sort by date
 	usort($tmp, "sortByDate");
 	return $tmp;
 }
 
 function getItem($filename) {
-	if (!file_exists(PATH_METADATA.$filename.'.json')) {
+	$metadataFile = PATH_METADATA.$filename.DS.$filename.'.json';
+
+	if (!file_exists($metadataFile)) {
 		return false;
 	}
 
-	$json = file_get_contents(PATH_METADATA.$filename.'.json');
+	$json = file_get_contents($metadataFile);
 	$data = json_decode($json, true);
 	$item = buildItem($data, $filename);
 

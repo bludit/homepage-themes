@@ -38,3 +38,21 @@ a {
 footer {
 	font-size: 0.8em;
 }
+
+ul.features {
+	font-size: 0.9em;
+}
+
+ul.features > li {
+	margin-bottom: 10px;
+}
+
+a.author-social {
+	font-size: 1.5em;
+	color: #888;
+	margin-right: 5px;
+}
+
+a.author-social:hover {
+	color: #555;
+}

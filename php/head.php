@@ -1,3 +1,4 @@
+<?php defined('BLUDIT') or die('Bludit'); ?>
 <head>
 
 	<meta charset="UTF-8">
@@ -7,7 +8,7 @@
 	<meta name="description" content="<?php l('head description') ?>">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="<?php echo DOMAIN ?>/favicon.png">
+	<link rel="icon" type="image/png" href="<?php echo DOMAIN ?>/img/favicon.png">
 
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image" />
