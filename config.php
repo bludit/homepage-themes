@@ -123,7 +123,8 @@ if (!empty($_GET['item'])) {
 	$_item = getItem($itemName);
 	$_whereAmI = 'item';
 	if ($_item===false) {
-		$_whereAmI = 'notfound';
+		header("HTTP/1.0 404 Not Found");
+		exit;
 	}
 } else {
 	$_items = getItems();
