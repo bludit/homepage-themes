@@ -7,6 +7,7 @@ define('PATH_METADATA', PATH_ROOT.'metadata'.DS);
 define('CHARSET', 'UTF-8');
 #define('DOMAIN', 'http://localhost:8000');
 define('DOMAIN', 'https://themes.bludit.com');
+#define('CDN', 'http://localhost:8080/metadata/');
 define('CDN', 'https://rawgit.com/bludit/themes-repository/master/');
 
 // Returns the translation of the key
