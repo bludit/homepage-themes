@@ -6,20 +6,20 @@
 	<div class="row mt-4">
 		<div class="col-md-8">
 			<img class="img-fluid" src="<?php echo $_item['screenshoot_url'] ?>" alt="Screenshoot">
-			<div class="my-4">
+			<div class="my-4 text-center">
 				<?php
 					if (!empty($_item['demo_url'])) {
-						echo '<a class="btn btn-primary btn-block" href="'.$_item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>'.PHP_EOL;
+						echo '<a class="btn btn-primary" href="'.$_item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>'.PHP_EOL;
 					}
 
 					if ($_item['price_usd']>0) {
-						echo '<a class="btn btn-secondary btn-block" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$_item['price_usd'].'</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$_item['price_usd'].'</a>'.PHP_EOL;
 					} else {
-						echo '<a class="btn btn-secondary btn-block" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>'.PHP_EOL;
 					}
 
 					if (!empty($_item['information_url'])) {
-						echo '<a class="btn btn-secondary btn-block" href="'.$_item['information_url'].'" role="button" target="_blank"><i class="fa fa-info" aria-hidden="true"></i> More information</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['information_url'].'" role="button" target="_blank"><i class="fa fa-info" aria-hidden="true"></i> More information</a>'.PHP_EOL;
 					}
 				?>
 			</div>
