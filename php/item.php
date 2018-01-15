@@ -9,17 +9,17 @@
 			<div class="my-4 text-center">
 				<?php
 					if (!empty($_item['demo_url'])) {
-						echo '<a class="btn btn-primary" href="'.$_item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>'.PHP_EOL;
+						echo '<a class="btn btn-primary" href="'.$_item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> '.l('Live Demo',false).'</a>'.PHP_EOL;
 					}
 
 					if ($_item['price_usd']>0) {
-						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy $'.$_item['price_usd'].'</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy',false).' $'.$_item['price_usd'].'</a>'.PHP_EOL;
 					} else {
-						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Free Download</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Free Download',false).'</a>'.PHP_EOL;
 					}
 
 					if (!empty($_item['information_url'])) {
-						echo '<a class="btn btn-secondary" href="'.$_item['information_url'].'" role="button" target="_blank"><i class="fa fa-info" aria-hidden="true"></i> More information</a>'.PHP_EOL;
+						echo '<a class="btn btn-secondary" href="'.$_item['information_url'].'" role="button" target="_blank"><i class="fa fa-info" aria-hidden="true"></i> '.l('More information',false).'</a>'.PHP_EOL;
 					}
 				?>
 			</div>
@@ -27,12 +27,12 @@
 
 		<div class="col-md-4">
 			<div class="my-4">
-				<h3 class="my-3">Description</h3>
+				<h3 class="my-3"><?php l('Description') ?></h3>
 				<p><?php echo $_item['description'] ?></p>
 			</div>
 
 			<div class="my-4">
-				<h3 class="my-3">Features</h3>
+				<h3 class="my-3"><?php l('Features') ?></h3>
 				<ul class="features">
 					<?php
 						foreach ($_item['features'] as $feature) {
@@ -43,12 +43,12 @@
 			</div>
 
 			<div class="my-4">
-				<h4 class="my-3">Last update</h4>
+				<h4 class="my-3"><?php l('Last Update') ?></h4>
 				<?php echo $_item['release_date'] ?>
 			</div>
 
 			<div class="my-4">
-			<h4>Author <?php echo $_item['author_name'] ?></h4>
+			<h4><?php l('Author') ?> <?php echo $_item['author_name'] ?></h4>
 				<?php
 					if (!empty($_item['author_facebook'])) {
 						echo'<a class="author-social" href="'.$_item['author_facebook'].'" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>'.PHP_EOL;
