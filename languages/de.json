@@ -1,4 +1,8 @@
 {
+	"head-title": "Themes - Bludit",
+	"head-description": "Schöne und coole Themes für Bludit. Unterstützung von HTML5, responsiv, flexibel, einfach and übersichtlich.",
+	"little-description-paragraph1": "<b>Schönbe</b> und <b>coole</b> Themes für Bludit",
+
 	"demo": "Demo",
 	"documentation": "Dokumentation",
 	"themes": "Themes",
@@ -6,10 +10,17 @@
 	"donations": "Spenden",
 	"donate": "Spenden",
 	"download": "Download",
-	"bludit-license": "Bludit steht unter der <a href=\"https://tldrlegal.com/license/mit-license\">MIT-Lizenz</a>",
-
-	"head-title": "Themes - Bludit",
-	"head-description": "Schöne und coole Themes für Bludit. Unterstützung von HTML5, responsiv, flexibel, einfach and übersichtlich.",
-	"little-description-paragraph1": "<b>Schönbe</b> und <b>coole</b> Themes für Bludit",
-	"search": "Suche"
+	"search": "Suche",
+	"live-demo": "Live Demo",
+	"free-download": "Free Download",
+	"more-information": "More information",
+	"made-by": "Made by",
+	"support-forum": "Support Forum",
+	"support-chat": "Support Chat",
+	"add-new-theme": "Add New Theme",
+	"description": "Description",
+	"features": "Features",
+	"last-update": "Last update",
+	"author": "Author",
+	"buy": "Buy"
 }
