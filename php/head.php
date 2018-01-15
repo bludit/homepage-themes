@@ -35,15 +35,16 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="<?php echo $currentLanguage ?>" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="<?php echo $_topbar['website'] ?>" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="Bludit Logo" />
 	<?php
 		if ($_item!==false) {
+			echo '<meta property="og:url" content="'.$_item['permalink'].'" />'.PHP_EOL;
 			echo '<meta property="og:title" content="'.$_item['name'].' - '.l('head title', false).'" />'.PHP_EOL;
 			echo '<meta property="og:description" content="'.$_item['description'].'" />'.PHP_EOL;
 			echo '<meta property="og:image" content="'.$_item['screenshoot_facebook_url'].'" />'.PHP_EOL;
 		} else {
+			echo '<meta property="og:url" content="'.$_topbar['website'].'" />'.PHP_EOL;
 			echo '<meta property="og:title" content="'.l('head title', false).'" />'.PHP_EOL;
 			echo '<meta property="og:description" content="'.l('head description', false).'" />'.PHP_EOL;
 			echo '<meta property="og:image" content="https://df6m0u2ovo2fu.cloudfront.net/images/bludit-facebook-cards.png" />'.PHP_EOL;
