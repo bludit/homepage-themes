@@ -30,6 +30,8 @@ function buildItem($data, $filename) {
 
 	$data['filename'] = $filename;
 	$data['screenshoot_url'] = CDN.$data['filename'].'/screenshot800x600.png';
+	$data['screenshoot_twitter_url'] = CDN.$data['filename'].'/screenshot800x600.png';
+	$data['screenshoot_facebook_url'] = CDN.$data['filename'].'/screenshot800x600.png';
 	$data['permalink'] = $_topbar['website'].'/theme/'.$filename;
 	if (isset($data['description_'.$currentLanguage])) {
 		$data['description'] = $data['description_'.$currentLanguage];
