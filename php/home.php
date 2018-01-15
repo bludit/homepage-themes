@@ -15,7 +15,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><a href="<?php echo $item['permalink'] ?>"><?php echo $item['name'] ?></a></h4>
 					<h6 class="card-subtitle mb-3">Made by <?php echo $item['author_name'] ?></h6>
-					<p class="card-text text-truncate"><?php echo $item['description'] ?></p>
+
 					<?php
 						if (!empty($item['demo_url'])) {
 							echo '<a class="btn btn-primary btn-sm" href="'.$item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Live Demo</a>'.PHP_EOL;

@@ -56,3 +56,12 @@ a.author-social {
 a.author-social:hover {
 	color: #555;
 }
+
+.btn {
+	padding: 5px 13px;
+	background: linear-gradient(to bottom,#90a4ae 0,#78909c 100%);
+}
+
+.btn-primary {
+	background: linear-gradient(to bottom,#42a5f5 0,#2196f3 100%);
+}
