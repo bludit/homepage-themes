@@ -36,7 +36,9 @@
 				<ul class="features">
 					<?php
 						foreach ($_item['features'] as $feature) {
-							echo '<li>'.$feature.'</li>';
+							if (!empty($feature)) {
+								echo '<li>'.$feature.'</li>';
+							}
 						}
 					?>
 				</ul>
