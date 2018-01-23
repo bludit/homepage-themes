@@ -15,9 +15,9 @@ a {
 }
 
 .item {
-	margin-bottom: 80px;
-	padding-right: 45px;
-	padding-left: 45px;
+	margin-bottom: 70px;
+	padding-right: 35px;
+	padding-left: 35px;
 }
 
 .card-title {
@@ -28,6 +28,11 @@ a {
 .card-subtitle {
 	font-size: 0.9em;
 	color: #888;
+}
+
+.card-description {
+	height: 100px;
+
 }
 
 .nav-link {
@@ -64,4 +69,9 @@ a.author-social:hover {
 
 .btn-primary {
 	background: linear-gradient(to bottom,#42a5f5 0,#2196f3 100%);
+}
+
+#search {
+	width: 60%;
+	margin: 0 auto;
 }

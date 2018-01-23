@@ -1,7 +1,8 @@
 {
-	"head-title": "Temas - Bludit",
-	"head-description": "Hermosos y geniales temas para Bludit. Soporte para HTML5, receptivo, flexibles y simples.",
-	"little-description-paragraph1": "<b>Hermosos</b> y <b>geniales</b> temas para Bludit",
+	"head-title": "Plugins - Bludit",
+	"head-description": "Amplíe la funcionalidad de Bludit con increíbles plugins. Redes sociales, editores HTML, RSS Feed, Sitemap, Open Graph, Twitter Cards, y mucho más.",
+	"little-description-paragraph1": "<b>Amplíe</b> las funcionalidades de Bludit con <b>increíbles</b> plugins",
+	"add-new-plugin": "Agregar Plugin",
 
 	"demo": "Demo",
 	"documentation": "Documentación",
@@ -17,10 +18,10 @@
 	"made-by": "Hecho por",
 	"support-forum": "Foro de Soporte",
 	"support-chat": "Chat",
-	"add-new-theme": "Agregar Nuevo Tema",
 	"description": "Descripción",
 	"features": "Caracteresticas",
 	"last-update": "Ultima actualización",
 	"author": "Autor",
-	"buy": "Comprar"
+	"buy": "Comprar",
+	"version": "Versión"
 }
