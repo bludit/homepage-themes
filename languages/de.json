@@ -1,8 +1,8 @@
 {
-	"head-title": "Plugins - Bludit",
-	"head-description": "Erweitere die Funktionalität von Bludit mit einmaligen Plugins. HTML-Editoren, CSS-Anpassung, RSS-Feed, Sitemap, Open Graph, Twitter Cards und mehr.",
-	"little-description-paragraph1": "<b>Erweitere</b> die Funktionalität von Bludit mit <b>einmaligen</b> Plugins",
-	"add-new-plugin": "Add New Plugin",
+	"head-title": "Themes - Bludit",
+	"head-description": "Schöne und coole Themes für Bludit. Unterstützung von HTML5, responsiv, flexibel, einfach and übersichtlich.",
+	"little-description-paragraph1": "<b>Schönbe</b> und <b>coole</b> Themes für Bludit",
+	"add-new-theme": "Add New Theme",
 
 	"demo": "Demo",
 	"documentation": "Dokumentation",
