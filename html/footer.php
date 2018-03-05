@@ -25,7 +25,7 @@
 				<span class="text-muted"> | </span>
 				<a class="text-white" href="https://gitter.im/bludit/support"><?php l('Support Chat') ?></a>
 				<span class="text-muted"> | </span>
-				<a class="text-white" href="https://github.com/bludit/plugins-repository"><?php l('Add New Plugin') ?></a>
+				<a class="text-white" href="https://github.com/bludit/plugins-repository"><?php l('Add New Theme') ?></a>
 			</div>
 		</div>
 
