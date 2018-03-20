@@ -6,11 +6,13 @@
 
 			</div>
 			<div class="col-6 text-right">
-				<a class="text-white" href="https://plugins.bludit.com">English</a>
+				<a class="text-white" href="https://themes.bludit.com">English</a>
 				<span class="text-muted"> | </span>
-				<a class="text-white" href="https://plugins.bludit.com/de/">Deutsch</a>
+				<a class="text-white" href="https://themes.bludit.com/de/">Deutsch</a>
 				<span class="text-muted"> | </span>
-				<a class="text-white" href="https://plugins.bludit.com/es/">Español</a>
+				<a class="text-white" href="https://themes.bludit.com/es/">Español</a>
+				<span class="text-muted"> | </span>
+				<a class="text-white" href="https://themes.bludit.com/it/">Italiano</a>
 			</div>
 		</div>
 		<div class="row">
@@ -25,7 +27,7 @@
 				<span class="text-muted"> | </span>
 				<a class="text-white" href="https://gitter.im/bludit/support"><?php l('Support Chat') ?></a>
 				<span class="text-muted"> | </span>
-				<a class="text-white" href="https://github.com/bludit/plugins-repository"><?php l('Add New Theme') ?></a>
+				<a class="text-white" href="https://github.com/bludit/themes-repository"><?php l('Add New Theme') ?></a>
 			</div>
 		</div>
 
