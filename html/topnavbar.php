@@ -29,6 +29,7 @@
 						<a class="dropdown-item" href="https://themes.bludit.com">English</a>
 						<a class="dropdown-item" href="https://themes.bludit.com/de/">Deutsch</a>
 						<a class="dropdown-item" href="https://themes.bludit.com/es/">Español</a>
+						<a class="dropdown-item" href="https://themes.bludit.com/it/">Italiano</a>
 					</div>
 				</li>
 			</ul>
