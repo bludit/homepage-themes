@@ -17,7 +17,7 @@
 		</div>
 		<div class="row">
 			<div class="col-6">
-			<a class="text-white" href="<?php echo $_topbar['website'] ?>">Bludit Plugins</a>
+			<a class="text-white" href="<?php echo $_topbar['website'] ?>">Bludit Themes</a>
 				<span class="text-muted">© 2018</span>
 			</div>
 			<div class="col-6 text-right">
