@@ -4,6 +4,7 @@ This repository contains the files (HTML, JS, CSS) for the official websites of 
 - (English) https://themes.bludit.com
 - (Deutsch) https://themes.bludit.com/de/
 - (Español) https://themes.bludit.com/es/
+- (Italiano) https://themes.bludit.com/it/ 
 
 ## How to add a Theme
 All themes and authors are in the bellow repository.
