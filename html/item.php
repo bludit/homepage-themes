@@ -77,7 +77,7 @@
 					echo '<a class="btn btn-primary" href="'.$_item['demo_url'].'" role="button" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> '.l('Live Demo',false).'</a>'.PHP_EOL;
 				}
 
-				if ($_item['price_usd']>0 || $_item['price_usd']=='Fair price') {
+				if ($_item['price_usd']>0 || $_item['price_usd']==' Fair price') {
 					echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy',false).' $'.$_item['price_usd'].'</a>'.PHP_EOL;
 				} else {
 					echo '<a class="btn btn-secondary" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Free Download',false).'</a>'.PHP_EOL;
