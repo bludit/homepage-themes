@@ -24,7 +24,7 @@
 						if ($item['price_usd']>0) {
 							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy',false).' $'.$item['price_usd'].'</a>'.PHP_EOL;
 						} elseif ($item['price_usd']==-1) {
-							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy from',false).' $'.$item['price_usd'].'</a>'.PHP_EOL;
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy from',false).' $1</a>'.PHP_EOL;
 						} else {
 							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Free Download',false).'</a>'.PHP_EOL;
 						}
