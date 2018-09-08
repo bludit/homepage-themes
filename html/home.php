@@ -28,10 +28,10 @@
 						}
 				   
 				   		if ( (!empty($item['download_url'])) && (!empty($item['download_url_v2'])) ) {
-							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Download for Bludit v3.x',false).'</a>'.PHP_EOL;
-							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Download for Bludit v2.x',false).'</a>'.PHP_EOL;
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v3',false).'</a>'.PHP_EOL;
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;
 						} else {
-							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Download for Bludit v2.x',false).'</a>'.PHP_EOL;	
+							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;	
 						}
 					?>
 				</div>

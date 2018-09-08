@@ -24,5 +24,8 @@
 	"author": "Author",
 	"buy": "Buy",
 	"buy-from": "Buy from",
-	"version": "Version"
+	"version": "Version",
+
+	"download-for-bludit-v2": "Download for Bludit v2.x",
+	"download-for-bludit-v3": "Download for Bludit v3.x"
 }
