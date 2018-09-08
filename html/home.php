@@ -27,7 +27,7 @@
 							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy from',false).' $1</a>'.PHP_EOL;
 						}
 				   
-				   		if (!empty($item['download_url']) && !empty($item['download_url_v2']) ) else {
+				   		if ( (!empty($item['download_url'])) && (!empty($item['download_url_v2'])) ) {
 							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Download for Bludit v3.x',false).'</a>'.PHP_EOL;
 							echo '<a class="btn btn-secondary btn-sm" href="'.$item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('Download for Bludit v2.x',false).'</a>'.PHP_EOL;
 						} else {
