@@ -25,11 +25,13 @@
 					echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy',false).' $'.$_item['price_usd'].'</a>'.PHP_EOL;
 				} elseif ($_item['price_usd']==-1) {
 					echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i> '.l('Buy from',false).' $1</a>'.PHP_EOL;
-				} elseif ( (!empty($_item['download_url'])) && (!empty($_item['download_url_v2'])) ) {
-					echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v3',false).'</a>'.PHP_EOL;
-					echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;
 				} else {
-					echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;
+					if ( !empty($_item['download_url_v3']) ) {
+						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url_v3'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v3',false).'</a>'.PHP_EOL;
+					}
+					if ( !empty($_item['download_url']) ) {
+						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;
+					}
 				}
 			?>
 		</div>
