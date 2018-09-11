@@ -55,7 +55,7 @@
 		<div class="my-4">
 			<h3 class="my-3"><?php l('Support') ?></h3>
 			<p>For help with questions, issues or extra configurations, visit the developer's site.</p>
-			<a class="btn btn-primary btn-sm" href="" role="button" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Website</a>
+			<a class="btn btn-primary btn-sm" href="<?php echo $_item['information_url'] ?>" role="button" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Website</a>
 		</div>
 		<?php endif ?>
 
