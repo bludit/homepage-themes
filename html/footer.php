@@ -18,7 +18,7 @@
 		<div class="row">
 			<div class="col-6">
 			<a class="text-white" href="<?php echo $_topbar['website'] ?>">Bludit Themes</a>
-				<span class="text-muted">© <?php echo date('y') ?></span>
+				<span class="text-muted">© <?php echo date('Y') ?></span>
 			</div>
 			<div class="col-6 text-right">
 				<a class="text-white" href="https://www.bludit.com">Bludit</a>
