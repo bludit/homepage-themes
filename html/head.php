@@ -38,6 +38,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="Bludit Logo" />
+	<meta property="og:site_name" content="Bludit Themes"/>
 	<?php
 		if ($_item!==false) {
 			echo '<meta property="og:url" content="'.$_item['permalink'].'" />'.PHP_EOL;

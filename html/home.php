@@ -3,7 +3,7 @@
 <div class="container">
 
 	<!-- Page Heading -->
-	<h4 class="my-5 text-center"><?php l('little-description-paragraph1') ?></h4>
+	<h1 style="font-size: 1.6em;" class="my-5 text-center"><?php l('little-description-paragraph1') ?></h1>
 
 	<div class="row my-5">
 

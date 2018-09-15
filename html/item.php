@@ -4,9 +4,7 @@
 
 	<div class="col-lg-8 col-md-10 mx-auto">
 
-		<h2 class="my-4">
-			<?php echo $_item['name'] ?>
-		</h2>
+		<h1 style="font-size: 1.6em;" class="my-4"><?php echo $_item['name'] ?></h1>
 
 		<div class="my-4">
 			<img src="<?php echo $_item['screenshoot_url'] ?>" class="img-fluid item-screenshot" alt="Responsive image">
@@ -54,8 +52,8 @@
 		<?php if (!empty($_item['information_url'])): ?>
 		<div class="my-4">
 			<h3 class="my-3"><?php l('Support') ?></h3>
-			<p>For help with questions, issues or extra configurations, visit the developer's site.</p>
-			<a class="btn btn-primary btn-sm" href="<?php echo $_item['information_url'] ?>" role="button" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Website</a>
+			<p><?php l('for-more-information-or-extra') ?></p>
+			<a class="btn btn-primary btn-sm" href="<?php echo $_item['information_url'] ?>" role="button" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> <?php l('More information') ?></a>
 		</div>
 		<?php endif ?>
 

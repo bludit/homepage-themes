@@ -70,11 +70,15 @@ a.author-social:hover {
 }
 
 .btn-primary {
-	background: linear-gradient(to bottom,#42a5f5 0,#2196f3 100%);
+	background: #42a5f5;
 }
 
 .btn-secondary {
-	background: linear-gradient(to bottom,#42c9f5 0,#21a2f3 100%);
+	background: #3cb6de;
+}
+
+.btn-secondary:hover {
+	background: #359fc1;
 }
 
 #search {
