@@ -8,6 +8,8 @@
 			<div class="col-6 text-right">
 				<a class="text-white" href="https://themes.bludit.com">English</a>
 				<span class="text-muted"> | </span>
+				<a class="text-white" href="https://themes.bludit.com/ru/">Русский</a>
+				<span class="text-muted"> | </span>
 				<a class="text-white" href="https://themes.bludit.com/de/">Deutsch</a>
 				<span class="text-muted"> | </span>
 				<a class="text-white" href="https://themes.bludit.com/es/">Español</a>
