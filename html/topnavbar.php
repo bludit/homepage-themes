@@ -27,6 +27,7 @@
 					<a class="nav-link dropdown-toggle" href="https://themes.bludit.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="https://themes.bludit.com">English</a>
+						<a class="dropdown-item" href="https://themes.bludit.com/ru/">Русский</a>
 						<a class="dropdown-item" href="https://themes.bludit.com/de/">Deutsch</a>
 						<a class="dropdown-item" href="https://themes.bludit.com/es/">Español</a>
 						<a class="dropdown-item" href="https://themes.bludit.com/it/">Italiano</a>
