@@ -5,6 +5,7 @@ You can colaborate and improve this site, create a pull request with the changes
 - (English) https://themes.bludit.com
 - (Deutsch) https://themes.bludit.com/de/
 - (Español) https://themes.bludit.com/es/
+- (Русский) https://themes.bludit.com/ru/
 
 ## How to add a theme
 Visit the bellow repository where you can add your free or paid theme.
