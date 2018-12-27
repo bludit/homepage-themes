@@ -6,6 +6,10 @@
 
 		<h1 style="font-size: 1.6em;" class="my-4"><?php echo $_item['name'] ?></h1>
 
+		<?php if (!$_item['translated']): ?>
+			<div class="alert alert-warning"><a target="_blank" href="https://github.com/bludit/plugins-repository/tree/master/items/<?php echo $_item['key'] ?>"><?php echo l("this-plugin-has-not-yet-been-translated-into") ?></a></div>
+		<?php endif; ?>
+
 		<div class="my-4">
 			<img src="<?php echo $_item['screenshoot_url'] ?>" class="img-fluid item-screenshot" alt="Responsive image">
 		</div>
