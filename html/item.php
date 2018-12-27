@@ -11,7 +11,7 @@
 		<?php endif; ?>
 
 		<div class="my-4">
-			<img src="<?php echo $_item['screenshoot_url'] ?>" class="img-fluid item-screenshot" alt="Responsive image">
+			<img src="<?php echo $_item['screenshot_url'] ?>" class="img-fluid item-screenshot" alt="Responsive image">
 		</div>
 
 		<div class="my-4" id="download">
