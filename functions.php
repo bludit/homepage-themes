@@ -20,9 +20,9 @@ function buildItem($data, $key) {
 
 	$data['translated'] = true;
 	$data['key'] = $key;
-	$data['screenshoot_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
-	$data['screenshoot_twitter_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
-	$data['screenshoot_facebook_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
+	$data['screenshot_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
+	$data['screenshot_twitter_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
+	$data['screenshot_facebook_url'] = CDN.'items/'.$data['key'].'/screenshot.png';
 	$data['permalink'] = rtrim($_topbar['website'],'/').'/'.ITEM_TYPE.'/'.$key;
 	if (!empty($data['description_'.$currentLanguage])) {
 		$data['description'] = $data['description_'.$currentLanguage];

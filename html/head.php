@@ -25,7 +25,7 @@
 		if ($_item!==false) {
 			echo '<meta name="twitter:title" content="'.$_item['name'].' - '.l('head title', false).'" />'.PHP_EOL;
 			echo '<meta name="twitter:description" content="'.$_item['description'].'" />'.PHP_EOL;
-			echo '<meta name="twitter:image" content="'.$_item['screenshoot_twitter_url'].'" />'.PHP_EOL;
+			echo '<meta name="twitter:image" content="'.$_item['screenshot_twitter_url'].'" />'.PHP_EOL;
 		} else {
 			echo '<meta name="twitter:title" content="'.l('head title', false).'" />'.PHP_EOL;
 			echo '<meta name="twitter:description" content="'.l('head description', false).'" />'.PHP_EOL;
@@ -44,7 +44,7 @@
 			echo '<meta property="og:url" content="'.$_item['permalink'].'" />'.PHP_EOL;
 			echo '<meta property="og:title" content="'.$_item['name'].' - '.l('head title', false).'" />'.PHP_EOL;
 			echo '<meta property="og:description" content="'.$_item['description'].'" />'.PHP_EOL;
-			echo '<meta property="og:image" content="'.$_item['screenshoot_facebook_url'].'" />'.PHP_EOL;
+			echo '<meta property="og:image" content="'.$_item['screenshot_facebook_url'].'" />'.PHP_EOL;
 		} else {
 			echo '<meta property="og:url" content="'.$_topbar['website'].'" />'.PHP_EOL;
 			echo '<meta property="og:title" content="'.l('head title', false).'" />'.PHP_EOL;
