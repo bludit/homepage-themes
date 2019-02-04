@@ -12,7 +12,7 @@
 			<div class="col-lg-6 item">
 			<div class="card h-100">
 				<a href="<?php echo $item['permalink'] ?>">
-					<div style="height: 400px; background: url('<?php echo $item['screenshot_url'] ?>'); background-repeat: no-repeat; background-position: center center; background-size: contain;"></div>
+					<div style="height: 400px; background: url('<?php echo $item['screenshot_url'] ?>'); background-repeat: no-repeat; background-position: top center; background-size: contain;"></div>
 				</a>
 				<div class="card-body">
 					<h4 class="card-title"><a href="<?php echo $item['permalink'] ?>"><?php echo $item['name'] ?></a></h4>
