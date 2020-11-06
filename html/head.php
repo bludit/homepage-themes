@@ -36,7 +36,7 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="<?php echo $currentLanguage ?>" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Bludit Plugins"/>
+	<meta property="og:site_name" content="Bludit Themes"/>
 	<meta property="og:image:type" content="image/png" />
 	<?php
 		if ($_item!==false) {

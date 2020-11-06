@@ -6,6 +6,7 @@ You can collaborate and improve this site, create a pull request with the change
 - (Deutsch) https://themes.bludit.com/de/
 - (Español) https://themes.bludit.com/es/
 - (Русский) https://themes.bludit.com/ru/
+- (Português) https://themes.bludit.com/pt/
 
 ## How to add a theme
 Visit the below repository where you can add your free or paid theme.
