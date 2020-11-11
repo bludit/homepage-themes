@@ -19,7 +19,7 @@
 		</div>
 		<div class="row">
 			<div class="col-6">
-			<a class="text-white" href="<?php echo $_topbar['website'] ?>">><?php l('Bludit Themes') ?></a>
+			<a class="text-white" href="<?php echo $_topbar['website'] ?>"><?php l('Bludit Themes') ?></a>
 				<span class="text-muted">© <?php echo date('Y') ?></span>
 			</div>
 			<div class="col-6 text-right">
