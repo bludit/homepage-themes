@@ -13,11 +13,13 @@
 				<a class="text-white" href="https://themes.bludit.com/es/">Español</a>
 				<span class="text-muted"> | </span>
 				<a class="text-white" href="https://themes.bludit.com/ru/">Русский</a>
+				<span class="text-muted"> | </span>
+				<a class="text-white" href="https://themes.bludit.com/pt/">Português</a>				
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-6">
-			<a class="text-white" href="<?php echo $_topbar['website'] ?>">Bludit Themes</a>
+			<a class="text-white" href="<?php echo $_topbar['website'] ?>"><?php l('Bludit Themes') ?></a>
 				<span class="text-muted">© <?php echo date('Y') ?></span>
 			</div>
 			<div class="col-6 text-right">
