@@ -34,6 +34,9 @@
 					if ( !empty($_item['download_url_v2']) ) {
 						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url_v2'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v2',false).'</a>'.PHP_EOL;
 					}
+					if ( !empty($_item['download_url_v4']) ) {
+						echo '<a class="btn btn-secondary btn-sm" href="'.$_item['download_url_v4'].'" role="button" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> '.l('download-for-bludit-v4',false).'</a>'.PHP_EOL;
+					}
 				}
 			?>
 		</div>
