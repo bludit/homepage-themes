@@ -11,9 +11,9 @@ define('CHARSET', 'UTF-8');
 #define('CDN', 'http://localhost:8000/metadata/');
 
 define('DOMAIN', 'https://themes.bludit.com');
-define('CDN', 'https://rawgit.com/bludit/themes-repository/master/');
+define('CDN', 'https://raw.githubusercontent.com/bludit/themes-repository/master/');
 
-define('SCREENSHOT_DEFAULT', 'https://rawgit.com/bludit/themes-repository/master/templates/screenshot.png');
+define('SCREENSHOT_DEFAULT', 'https://raw.githubusercontent.com/bludit/themes-repository/master/templates/screenshot.png');
 
 #define('ITEM_TYPE', 'plugin');
 define('ITEM_TYPE', 'theme');
